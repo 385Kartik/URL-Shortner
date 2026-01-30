@@ -141,6 +141,9 @@ app.get("/:code", async (req, res) => {
   res.redirect(url.longUrl);
 });
 
+
+
 mongoose.connect(process.env.MONGO_URI).then(() => {
   app.listen(process.env.PORT, () => console.log("Server running on 3000"));
 }).catch(err => console.log(err));
+
